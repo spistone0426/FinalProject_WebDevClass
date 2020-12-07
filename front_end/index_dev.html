@@ -1,0 +1,59 @@
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="index_style.css">
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+    <script src="app_code_dev.js"></script>
+    <title>Final Project Sal Pistone</title>
+</head>
+
+<body>
+<div class="container">
+    <h1>Class Directory</h1>
+</div>
+
+<form onsubmit="return false;" id="queryForm">
+
+    <label for="codeQuery">Search by course code</label><br>
+    <input type="text" id="codeQuery" name="codeQuery" value=""><br>
+    <input id="queryByCode" type="button" onclick="updateView(this)" value="Query" data-querytype="by_course_code" class="buttons">
+    <br>
+
+
+    <label for="titleQuery">Search by course title</label><br>
+    <input type="text" id="titleQuery" name="titleQuery" value=""><br>
+    <input id="queryByTitle" type="button" onclick="updateView(this)" value="Query" data-querytype="by_title" class="buttons">
+    <br>
+
+
+    <label for="instructorQuery">Search by course instructor</label><br>
+    <input type="text" id="instructorQuery" name="instructorQuery" value=""><br>
+    <input id="queryByInstructor" type="button" onclick="updateView(this)" value="Query" data-querytype="by_instructor" class="buttons">
+    <br>
+
+
+    <label for="levelQuery">Search by course level</label><br>
+    <input type="text" id="levelQuery" name="levelQuery" value=""><br>
+    <input id="queryByLevel" type="button" onclick="updateView(this)" value="Query" data-querytype="by_level" class="buttons">
+    <br>
+
+
+    <label for="combinedQuery">Search by course instructor and level</label><br>
+    <input type="text" id="nameQuery" name="nameQuery" value=""><br>
+    <input type="text" id="levQuery" name="levQuery" value=""><br>
+    <input id="queryCombined" type="button" onclick="updateView(this)" value="Query" data-querytype="combined_query" class="buttons">
+    <br>
+</form>
+<div id="results">
+</div>
+</body>
+</html>
+
+<script id="show_results_view" type="text/x-handlebars-template">
+        <ul>
+            {{#each courses}}
+            <li> CODE: {{this.course_code}} | TITLE: {{this.title}} | INSTRUCTOR: {{this.instructor}} | LEVEL: {{this.course_level}}
+            </li>
+            {{/each}}
+        </ul>
+</script>

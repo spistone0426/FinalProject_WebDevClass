@@ -1,0 +1,35 @@
+html{
+    background: linear-gradient(rgba(15,237,92,0.69), rgba(12,237,187,0.69), rgba(114,143,237,0.69));
+}
+
+h1{
+    text-align: center;
+}
+
+.buttons{
+    position: absolute;
+    display: block;
+    background: rgba(228,237,27,0.69);
+}
+.buttons:hover {
+    color: #fff;
+}
+.buttons:hover:after {
+    width: 110%;
+}
+
+li{
+    margin-top: 5%;
+    margin-bottom: 5%;
+    padding-bottom: 5%;
+    padding-top: 5%;
+}
+
+ul{
+   margin-left: 50%;
+    margin-right: 50%;
+    padding-left: 50%;
+    padding-right: 50%;
+}
+
+
