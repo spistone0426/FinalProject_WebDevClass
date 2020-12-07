@@ -70,6 +70,10 @@ app.get('/api/combined_query/:qname/:qlevel', (req,res) => {
 
 app.use('/demo',express.static('front_end'));
 
-app.listen(3000, function() {
+var Port = process.env.Port || 3000;
+
+app.listen(Port, function() {
     console.log("Server is running");
-})
+});
+
+
