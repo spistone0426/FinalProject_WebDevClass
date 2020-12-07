@@ -21,8 +21,8 @@ var updateView = async (button) => {
     }
 
     if (button.dataset.querytype == 'combined_query') {
-        let queryName = document.querySelector('#nameQuery').value;
-        let queryLevel = document.querySelector('#levQuery').value;
+        let queryName = document.querySelector('#instructorquery2').value;
+        let queryLevel = document.querySelector('#levelQuery2').value;
         api = `http://localhost:3000/api/combined_query/${queryName}/${queryLevel}`;
     }
 
